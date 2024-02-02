@@ -51,11 +51,11 @@
             </div>
 
             <div id="spinner" class="spinner-border text-primary d-none" role="status">
-                <span class="visually-hidden">Fuck n...</span>
+                <span id="open" class="d-none">Fuck n...</span>
             </div>
 
             <div id="alerta" class="alert alert-primary text-center d-none" role="alert">
-                Muak muak muak muak
+                Hasta Oppenheimer tuvo su final... <a href="juela.jpg" download>Toca aquí</a>
             </div>
 
         </div>
@@ -69,17 +69,20 @@
     const btn_yes = document.getElementById('btn-no');
     const spinner = document.getElementById('spinner');
     const alerta = document.getElementById('alerta');
+    const oppen = document.getElementById('open');
 
     console.log(spinner);
     btn_yes.addEventListener('click', (e) => {
         setTimeout(() => {
             spinner.classList.add('d-none');
+            oppen.classList.add('d-none');
             alerta.classList.remove('d-none')
         }, 2000);
 
         btn_no.classList.add('d-none');
         btn_yes.classList.add('d-none');
         spinner.classList.remove('d-none');
+        oppen.classList.remove('d-none');
 
     })
 
